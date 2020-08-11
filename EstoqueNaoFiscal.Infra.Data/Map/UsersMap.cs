@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 
 namespace EstoqueNaoFiscal.Infra.Data.Map
 {
@@ -14,6 +15,7 @@ namespace EstoqueNaoFiscal.Infra.Data.Map
             base.Configure(builder);
             builder.Property(c => c.Nome).IsRequired().HasMaxLength(50);
             builder.Property(c => c.Sobrenome).IsRequired().HasMaxLength(100);
+            builder.Property(c => c.Ativo).HasDefaultValue(1);
         }
     }
 }

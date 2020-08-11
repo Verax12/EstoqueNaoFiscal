@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Apresentation", "1 - Apresentation", "{851BD9C9-9FA0-4397-A4A4-34148F9A5A99}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - API", "1 - API", "{851BD9C9-9FA0-4397-A4A4-34148F9A5A99}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{60E7C988-7531-4CE6-885B-8418EC36FABA}"
 EndProject
@@ -13,17 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Services", "5 - Services", "{D5A3FF77-EFB1-4487-8054-29069DC23F9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueNaoFiscal.API", "EstoqueNaoFiscal.API\EstoqueNaoFiscal.API.csproj", "{BAECED74-4CC0-4DB3-B246-BEA55A21900F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstoqueNaoFiscal.API", "EstoqueNaoFiscal.API\EstoqueNaoFiscal.API.csproj", "{BAECED74-4CC0-4DB3-B246-BEA55A21900F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueNaoFiscal.Domain", "EstoqueNaoFiscal.Domain\EstoqueNaoFiscal.Domain.csproj", "{F3A8EE11-57FB-497D-A14E-1DC83CCB9B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstoqueNaoFiscal.Domain", "EstoqueNaoFiscal.Domain\EstoqueNaoFiscal.Domain.csproj", "{F3A8EE11-57FB-497D-A14E-1DC83CCB9B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueNaoFiscal.Infra.Data", "EstoqueNaoFiscal.Infra.Data\EstoqueNaoFiscal.Infra.Data.csproj", "{BDCA17AA-D2EE-467C-8B30-0CE4536E9FAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstoqueNaoFiscal.Infra.Data", "EstoqueNaoFiscal.Infra.Data\EstoqueNaoFiscal.Infra.Data.csproj", "{BDCA17AA-D2EE-467C-8B30-0CE4536E9FAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueNaoFiscal.Infra.IOC", "EstoqueNaoFiscal.Infra.IOC\EstoqueNaoFiscal.Infra.IOC.csproj", "{42C47D62-0FD8-4DCF-9BDA-5EF6093A7362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstoqueNaoFiscal.Infra.IOC", "EstoqueNaoFiscal.Infra.IOC\EstoqueNaoFiscal.Infra.IOC.csproj", "{42C47D62-0FD8-4DCF-9BDA-5EF6093A7362}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueNaoFiscal.Services", "EstoqueNaoFiscal.Services\EstoqueNaoFiscal.Services.csproj", "{847B3CBA-18EF-48F3-90EA-A1C17432DE15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstoqueNaoFiscal.Services", "EstoqueNaoFiscal.Services\EstoqueNaoFiscal.Services.csproj", "{847B3CBA-18EF-48F3-90EA-A1C17432DE15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueNaoFiscal.Application", "EstoqueNaoFiscal.Application\EstoqueNaoFiscal.Application.csproj", "{5325656E-315C-4DE4-B0D4-3323901D36FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstoqueNaoFiscal.Application", "EstoqueNaoFiscal.Application\EstoqueNaoFiscal.Application.csproj", "{5325656E-315C-4DE4-B0D4-3323901D36FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

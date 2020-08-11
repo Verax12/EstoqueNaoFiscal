@@ -4,14 +4,16 @@ using EstoqueNaoFiscal.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EstoqueNaoFiscal.Infra.Data.Migrations
 {
     [DbContext(typeof(EstoqueNaoFiscalContext))]
-    partial class EstoqueNaoFiscalContextModelSnapshot : ModelSnapshot
+    [Migration("20200811122348_Correções Iniciais")]
+    partial class CorreçõesIniciais
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,11 +34,15 @@ namespace EstoqueNaoFiscal.Infra.Data.Migrations
                         .HasColumnType("bit")
                         .HasDefaultValue(true);
 
-                    b.Property<DateTime?>("DataAtualizacao")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime>("DataAtualizacao")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(null);
 
                     b.Property<DateTime>("DataCadastro")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2020, 8, 11, 9, 23, 48, 692, DateTimeKind.Local));
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");

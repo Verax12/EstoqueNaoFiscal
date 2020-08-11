@@ -4,14 +4,16 @@ using EstoqueNaoFiscal.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EstoqueNaoFiscal.Infra.Data.Migrations
 {
     [DbContext(typeof(EstoqueNaoFiscalContext))]
-    partial class EstoqueNaoFiscalContextModelSnapshot : ModelSnapshot
+    [Migration("20200811122618_Correções Iniciais 2")]
+    partial class CorreçõesIniciais2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

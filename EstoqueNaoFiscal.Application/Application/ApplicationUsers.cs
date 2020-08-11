@@ -26,7 +26,7 @@ namespace EstoqueNaoFiscal.Application.Application
 
         public IEnumerable<Users> GetAll()
         {
-            throw new NotImplementedException();
+            return _serviceUsers.GetAll();
         }
 
         public Users GetById(int id)

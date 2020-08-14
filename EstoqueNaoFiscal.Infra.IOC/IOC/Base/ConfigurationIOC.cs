@@ -16,17 +16,20 @@ namespace EstoqueNaoFiscal.Infra.IOC.IOC.Base
 
             #region IOC Application
             builder.RegisterType<ApplicationUsers>().As<IApplicationUsers>();
+            builder.RegisterType<ApplicationEnderecos>().As<IApplicationEnderecos>();
 
             #endregion
 
             #region IOC Repositorys SQL
             builder.RegisterType<RepositoryUsers>().As<IRepositoryUsers>();
+            builder.RegisterType<RepositoryEnderecos>().As<IRepositoryEnderecos>();
             #endregion
 
             #endregion
 
             #region IOC Services
             builder.RegisterType<ServiceUsers>().As<IServiceUsers>();
+            builder.RegisterType<ServiceEnderecos>().As<IServiceEnderecos>();
 
             #endregion
 

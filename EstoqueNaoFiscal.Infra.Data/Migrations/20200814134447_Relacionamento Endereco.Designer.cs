@@ -4,14 +4,16 @@ using EstoqueNaoFiscal.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EstoqueNaoFiscal.Infra.Data.Migrations
 {
     [DbContext(typeof(EstoqueNaoFiscalContext))]
-    partial class EstoqueNaoFiscalContextModelSnapshot : ModelSnapshot
+    [Migration("20200814134447_Relacionamento Endereco")]
+    partial class RelacionamentoEndereco
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,18 +21,12 @@ namespace EstoqueNaoFiscal.Infra.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("EstoqueNaoFiscal.Domain.Models.Enderecos", b =>
+            modelBuilder.Entity("EstoqueNaoFiscal.Domain.Models.Address", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Bairro")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CEP")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Complemento")
                         .HasColumnType("nvarchar(max)");
@@ -41,9 +37,6 @@ namespace EstoqueNaoFiscal.Infra.Data.Migrations
                     b.Property<DateTime>("DataCadastro")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Estado")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Logradouro")
                         .HasColumnType("nvarchar(max)");
 
@@ -53,14 +46,14 @@ namespace EstoqueNaoFiscal.Infra.Data.Migrations
                     b.Property<int>("TipoLogradouro")
                         .HasColumnType("int");
 
-                    b.Property<int>("UsersId")
+                    b.Property<int?>("UsersId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("UsersId");
 
-                    b.ToTable("Enderecos");
+                    b.ToTable("Address");
                 });
 
             modelBuilder.Entity("EstoqueNaoFiscal.Domain.Models.Users", b =>
@@ -100,13 +93,11 @@ namespace EstoqueNaoFiscal.Infra.Data.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("EstoqueNaoFiscal.Domain.Models.Enderecos", b =>
+            modelBuilder.Entity("EstoqueNaoFiscal.Domain.Models.Address", b =>
                 {
                     b.HasOne("EstoqueNaoFiscal.Domain.Models.Users", "Users")
                         .WithMany("Endereco")
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UsersId");
                 });
 #pragma warning restore 612, 618
         }

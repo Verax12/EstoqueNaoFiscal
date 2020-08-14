@@ -47,5 +47,10 @@ namespace EstoqueNaoFiscal.Application.Application
         {
             _serviceUsers.Dispose();
         }
+
+        public List<Users> GetUserWhitAddress()
+        {
+            return _serviceUsers.GetUserWhitAddress();
+        }
     }
 }

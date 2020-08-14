@@ -17,5 +17,9 @@ namespace EstoqueNaoFiscal.Services.Services
             _repositoryUsers = RepositoryUsers;
         }
 
+        public List<Users> GetUserWhitAddress()
+        {
+            return _repositoryUsers.GetUserWhitAddress();
+        }
     }
 }

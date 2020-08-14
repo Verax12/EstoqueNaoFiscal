@@ -16,10 +16,12 @@ namespace EstoqueNaoFiscal.API.Controllers
     public class UsersController : ControllerBase
     {
         private readonly IApplicationUsers _applicationUsers;
-        public UsersController(IApplicationUsers applicationUsers)
+        private readonly IApplicationEnderecos _applicationEnderecos;
+        public UsersController(IApplicationUsers applicationUsers, IApplicationEnderecos applicationEnderecos)
         {
 
             _applicationUsers = applicationUsers;
+            _applicationEnderecos = applicationEnderecos;
 
         }
 
@@ -31,6 +33,20 @@ namespace EstoqueNaoFiscal.API.Controllers
         public string Get()
         {
             return JsonConvert.SerializeObject(_applicationUsers.GetAll());
+        }
+        /// <summary>
+        /// GET Addres
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GetAddress")]
+        public string GetAddress()
+        {
+            return JsonConvert.SerializeObject(_applicationUsers.GetUserWhitAddress(), new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            });
+
         }
 
         /// <summary>

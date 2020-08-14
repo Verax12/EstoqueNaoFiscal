@@ -10,6 +10,12 @@
             </summary>
             <returns>Json with All Users</returns>
         </member>
+        <member name="M:EstoqueNaoFiscal.API.Controllers.UsersController.GetAddress">
+            <summary>
+            GET Addres
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:EstoqueNaoFiscal.API.Controllers.UsersController.Get(System.Int32)">
             <summary>
             Get Users By Id

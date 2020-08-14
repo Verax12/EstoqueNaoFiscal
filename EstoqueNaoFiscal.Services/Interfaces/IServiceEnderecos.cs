@@ -6,8 +6,7 @@ using System.Text;
 
 namespace EstoqueNaoFiscal.Services.Interfaces
 {
-  public  interface IServiceUsers: IServiceBase<Users>
+    public interface IServiceEnderecos : IServiceBase<Enderecos>
     {
-        List<Users> GetUserWhitAddress();
     }
 }

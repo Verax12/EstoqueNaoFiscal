@@ -6,8 +6,7 @@ using System.Text;
 
 namespace EstoqueNaoFiscal.Domain.IRepositorys
 {
-    public interface IRepositoryUsers : IRepositoryBase<Users>
+    public interface IRepositoryEnderecos : IRepositoryBase<Enderecos>
     {
-        List<Users> GetUserWhitAddress();
     }
 }

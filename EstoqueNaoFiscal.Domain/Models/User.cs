@@ -11,5 +11,6 @@ namespace EstoqueNaoFiscal.Domain.Models
         public string Sobrenome { get; set; }
         public string Email { get; set; }
         public bool Ativo { get; set; }
+        public virtual ICollection<Enderecos> Endereco { get; set; }
     }
 }

@@ -18,10 +18,10 @@ namespace EstoqueNaoFiscal.Infra.Data.Context
             if (!optionsBuilder.IsConfigured)
                 optionsBuilder.UseSqlServer("Server=tcp:estoquenaofiscalapidbserver.database.windows.net,1433;Initial Catalog=EstoqueNaoFiscal.API_db;Persist Security Info=False;User ID=administrador;Password=Azure123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
-#if DEBUG
-            if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\w.gontijo\\Documents\\EstoqueNãoFiscal.mdf;Integrated Security=True;Connect Timeout=30");
-# endif
+//#if DEBUG
+           
+//                optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\w.gontijo\\Documents\\EstoqueNãoFiscal.mdf;Integrated Security=True;Connect Timeout=30");
+//# endif
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,6 +29,7 @@ namespace EstoqueNaoFiscal.Infra.Data.Context
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new UsersMap());
+            modelBuilder.ApplyConfiguration(new EnderecosMap());
         }
 
         public override int SaveChanges()
@@ -55,6 +56,7 @@ namespace EstoqueNaoFiscal.Infra.Data.Context
 
         #region DBSet
         public DbSet<Users> Users { get; set; }
+        public DbSet<Enderecos> Enderecos { get; set; }
 
         #endregion
     }

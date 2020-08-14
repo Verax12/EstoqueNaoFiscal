@@ -11,6 +11,10 @@
     <Compile Remove="Migrations\20200812130930_ Correçao ordenação DB.Designer.cs" />
     <Compile Remove="Migrations\20200812131219_ Correçao ordenação DB.cs" />
     <Compile Remove="Migrations\20200812131219_ Correçao ordenação DB.Designer.cs" />
+    <Compile Remove="Migrations\20200814141231_Configuracoes relacionamento.cs" />
+    <Compile Remove="Migrations\20200814141231_Configuracoes relacionamento.Designer.cs" />
+    <Compile Remove="Migrations\20200814143608_criando relacionamentos 2.cs" />
+    <Compile Remove="Migrations\20200814143608_criando relacionamentos 2.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

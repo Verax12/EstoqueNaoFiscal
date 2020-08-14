@@ -1,6 +1,7 @@
 ﻿using EstoqueNaoFiscal.Domain.Models;
 using EstoqueNaoFiscal.Infra.Data.Map;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,12 +11,18 @@ using System.Text.Json.Serialization;
 
 namespace EstoqueNaoFiscal.Infra.Data.Context
 {
-   public class EstoqueNaoFiscalContext : DbContext
+    public class EstoqueNaoFiscalContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if(!optionsBuilder.IsConfigured)
-            optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\w.gontijo\\Documents\\EstoqueNãoFiscal.mdf;Integrated Security=True;Connect Timeout=30");
+            if (!optionsBuilder.IsConfigured)
+                optionsBuilder.UseSqlServer("Server=tcp:estoquenaofiscalapidbserver.database.windows.net,1433;Initial Catalog=EstoqueNaoFiscal.API_db;Persist Security Info=False;User ID=administrador;Password=Azure123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+
+#if DEBUG
+            if (!optionsBuilder.IsConfigured)
+                optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\w.gontijo\\Documents\\EstoqueNãoFiscal.mdf;Integrated Security=True;Connect Timeout=30");
+# endif
+
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -7,6 +7,10 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200811122455_Correções Iniciais 2.cs" />
     <Compile Remove="Migrations\20200811122455_Correções Iniciais 2.Designer.cs" />
+    <Compile Remove="Migrations\20200812130930_ Correçao ordenação DB.cs" />
+    <Compile Remove="Migrations\20200812130930_ Correçao ordenação DB.Designer.cs" />
+    <Compile Remove="Migrations\20200812131219_ Correçao ordenação DB.cs" />
+    <Compile Remove="Migrations\20200812131219_ Correçao ordenação DB.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

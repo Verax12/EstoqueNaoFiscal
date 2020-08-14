@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EstoqueNaoFiscal.API</name>
+    </assembly>
+    <members>
+        <member name="M:EstoqueNaoFiscal.API.Controllers.UsersController.Get">
+            <summary>
+            Get All Users
+            </summary>
+            <returns>Json with All Users</returns>
+        </member>
+        <member name="M:EstoqueNaoFiscal.API.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            Get Users By Id
+            </summary>
+            <param name="id"></param>
+            <returns>Json User</returns>
+        </member>
+        <member name="M:EstoqueNaoFiscal.API.Program.Main(System.String[])">
+            <summary>
+            Configuração do AutoFac
+            </summary>
+        </member>
+        <member name="M:EstoqueNaoFiscal.API.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            Configuração do AutoFac
+            </summary>
+        </member>
+    </members>
+</doc>

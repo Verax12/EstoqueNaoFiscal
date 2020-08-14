@@ -22,19 +22,26 @@ namespace EstoqueNaoFiscal.API.Controllers
             _applicationUsers = applicationUsers;
 
         }
-        // GET: api/<UsersController>
+
+        /// <summary>
+        /// Get All Users
+        /// </summary>
+        /// <returns>Json with All Users</returns>
         [HttpGet]
         public string Get()
         {
             return JsonConvert.SerializeObject(_applicationUsers.GetAll());
         }
 
-        // GET api/<UsersController>/5
+        /// <summary>
+        /// Get Users By Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Json User</returns>
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return JsonConvert.SerializeObject(_applicationUsers.GetById(id));
-
         }
 
         // POST api/<UsersController>

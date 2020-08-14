@@ -23,11 +23,19 @@ namespace EstoqueNaoFiscal.Infra.Data.Repositorys.Base
             _context.Set<T>().Add(obj);
             _context.SaveChanges();
         }
-              
+
 
         public IEnumerable<T> GetAll()
         {
-            return _context.Set<T>().ToList();
+            try
+            {
+                return _context.Set<T>().ToList();
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
         }
 
         public T GetById(int id)
